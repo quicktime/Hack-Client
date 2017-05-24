@@ -244,7 +244,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
     public RenderGlobal renderGlobal;
     private RenderManager renderManager;
     private RenderItem renderItem;
-    private ItemRenderer itemRenderer;
+    public ItemRenderer itemRenderer;
     public EntityPlayerSP player;
     @Nullable
     private Entity renderViewEntity;

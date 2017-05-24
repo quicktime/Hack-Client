@@ -25,7 +25,7 @@ public class BlockEventData
     }
 
     /**
-     * Get the Event ID (different for each BlockID)
+     * Get the EventOld ID (different for each BlockID)
      */
     public int getEventID()
     {

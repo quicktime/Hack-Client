@@ -1,7 +1,7 @@
 package at.tiam.bolt.module;
 
+import at.tiam.bolt.event.EventManagerOld;
 import org.lwjgl.input.Keyboard;
-import at.tiam.bolt.event.EventManager;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -9,7 +9,7 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * Created by quicktime on 05/22/2017.
  */
-public class Module {
+public class Module implements IToggleable {
 
     private String name = getClass().getAnnotation(ModInfo.class).name();
 
@@ -25,7 +25,7 @@ public class Module {
      * Category
      */
     public enum Category {
-        COMBAT(0x3ABDFF), MOVEMENT(0xF8FF1F), RENDER(0x48FF1F), WORLD(0xCF1FFF), MISC(0xFFC100), PLAYER(0x00FFEC), GUI(0xE800D5);
+        COMBAT(0x3ABDFF), MOVEMENT(0xF8FF1F), RENDER(0x48FF1F), WORLD(0xCF1FFF), MISC(0xFFC100), PLAYER(0x00FFEC), GUI(0xE800D5), PLUGIN(0x838383);
 
         public int color;
 
@@ -103,11 +103,11 @@ public class Module {
         if (state) {
             onEnable();
             this.state = true;
-            EventManager.register(this);
+            EventManagerOld.register(this);
         } else {
             onDisable();
             this.state = false;
-            EventManager.unregister(this);
+            EventManagerOld.unregister(this);
         }
 
         //Save the module
@@ -141,4 +141,8 @@ public class Module {
         return getBind() == -1 ? "-1" : Keyboard.getKeyName(getBind());
     }
 
+    @Override
+    public boolean isEnabled() {
+        return state;
+    }
 }

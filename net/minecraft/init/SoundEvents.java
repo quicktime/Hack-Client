@@ -938,7 +938,7 @@ public class SoundEvents
             BLOCK_TRIPWIRE_CLICK_OFF = getRegisteredSoundEvent("block.tripwire.click_off");
             BLOCK_TRIPWIRE_CLICK_ON = getRegisteredSoundEvent("block.tripwire.click_on");
             BLOCK_TRIPWIRE_DETACH = getRegisteredSoundEvent("block.tripwire.detach");
-            UI_BUTTON_CLICK = getRegisteredSoundEvent("ui.button.click");
+            UI_BUTTON_CLICK = getRegisteredSoundEvent("gui.button.click");
             field_191264_hc = getRegisteredSoundEvent("entity.vex.ambient");
             field_191265_hd = getRegisteredSoundEvent("entity.vex.charge");
             field_191266_he = getRegisteredSoundEvent("entity.vex.death");

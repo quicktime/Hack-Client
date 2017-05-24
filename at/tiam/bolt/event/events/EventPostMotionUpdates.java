@@ -1,11 +1,11 @@
 package at.tiam.bolt.event.events;
 
-import at.tiam.bolt.event.Event;
+import at.tiam.bolt.event.EventOld;
 
 /**
  * Created by quicktime on 5/22/17.
  */
-public class EventPostMotionUpdates extends Event {
+public class EventPostMotionUpdates extends EventOld {
 
     public float yaw, pitch;
 

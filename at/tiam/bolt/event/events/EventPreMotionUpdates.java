@@ -1,11 +1,11 @@
 package at.tiam.bolt.event.events;
 
-import at.tiam.bolt.event.Event;
+import at.tiam.bolt.event.EventOld;
 
 /**
  * Created by quicktime on 5/22/17.
  */
-public class EventPreMotionUpdates extends Event {
+public class EventPreMotionUpdates extends EventOld {
 
     private boolean cancel;
 

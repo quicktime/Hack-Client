@@ -540,7 +540,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
     /**
      * Changes the field of view of the player depending on if they are underwater or not
      */
-    private float getFOVModifier(float partialTicks, boolean useFOVSetting)
+    public float getFOVModifier(float partialTicks, boolean useFOVSetting)
     {
         if (this.debugView)
         {
@@ -574,7 +574,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
         }
     }
 
-    private void hurtCameraEffect(float partialTicks)
+    public void hurtCameraEffect(float partialTicks)
     {
         if (this.mc.getRenderViewEntity() instanceof EntityLivingBase)
         {

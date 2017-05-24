@@ -1,11 +1,10 @@
-package at.tiam.bolt.ui;
+package at.tiam.bolt.gui;
 
 import at.tiam.bolt.Bolt;
-import at.tiam.bolt.event.EventManager;
-import at.tiam.bolt.event.EventTarget;
+import at.tiam.bolt.event.EventManagerOld;
+import at.tiam.bolt.event.EventTargetOld;
 import at.tiam.bolt.event.events.EventRender2D;
 import at.tiam.bolt.module.Module;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 
@@ -14,10 +13,10 @@ import net.minecraft.client.gui.ScaledResolution;
  */
 public class Hud {
     public Hud() {
-        EventManager.register(this);
+        EventManagerOld.register(this);
     }
 
-    @EventTarget
+    @EventTargetOld
     public void onRender(EventRender2D event) {
         ScaledResolution scaledResolution = new ScaledResolution(Minecraft.getMinecraft());
 

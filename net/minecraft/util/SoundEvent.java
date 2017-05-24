@@ -510,7 +510,7 @@ public class SoundEvent
         registerSound("record.strad");
         registerSound("record.wait");
         registerSound("record.ward");
-        registerSound("ui.button.click");
+        registerSound("gui.button.click");
         registerSound("weather.rain");
         registerSound("weather.rain.above");
     }
