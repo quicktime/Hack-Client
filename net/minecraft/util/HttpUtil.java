@@ -100,7 +100,7 @@ public class HttpUtil
 
             HttpURLConnection httpurlconnection = (HttpURLConnection)url.openConnection(p_151225_3_);
             httpurlconnection.setRequestMethod("POST");
-            httpurlconnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            httpurlconnection.setRequestProperty("Content-Category", "application/x-www-form-urlencoded");
             httpurlconnection.setRequestProperty("Content-Length", "" + content.getBytes().length);
             httpurlconnection.setRequestProperty("Content-Language", "en-US");
             httpurlconnection.setUseCaches(false);

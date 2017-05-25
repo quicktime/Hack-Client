@@ -301,7 +301,7 @@ public abstract class Biome
     /**
      * Given x, z coordinates, we count down all the y positions starting at 255 and working our way down. When we hit a
      * non-air block, we replace it with this.topBlock (default grass, descendants may set otherwise), and then a
-     * relatively shallow layer of blocks of type this.fillerBlock (default dirt). A random set of blocks below y == 5
+     * relatively shallow layer of blocks of category this.fillerBlock (default dirt). A random set of blocks below y == 5
      * (but always including y == 0) is replaced with bedrock.
      *  
      * If we don't hit non-air until somewhat below sea level, we top with gravel and fill down with stone.

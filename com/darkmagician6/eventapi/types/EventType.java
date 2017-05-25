@@ -9,7 +9,7 @@ package com.darkmagician6.eventapi.types;
 public class EventType {
 
     /**
-     * Used to define the type of a typed event.
+     * Used to define the category of a typed event.
      */
     public static final byte
             PRE = 0,

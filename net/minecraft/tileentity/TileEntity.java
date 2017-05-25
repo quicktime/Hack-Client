@@ -30,7 +30,7 @@ public abstract class TileEntity
     protected boolean tileEntityInvalid;
     private int blockMetadata = -1;
 
-    /** the Block type that this TileEntity is contained within */
+    /** the Block category that this TileEntity is contained within */
     protected Block blockType;
 
     private static void func_190560_a(String p_190560_0_, Class <? extends TileEntity > p_190560_1_)
@@ -193,7 +193,7 @@ public abstract class TileEntity
     }
 
     /**
-     * Gets the block type at the location of this entity (client-only).
+     * Gets the block category at the location of this entity (client-only).
      */
     public Block getBlockType()
     {
@@ -261,7 +261,7 @@ public abstract class TileEntity
         if (this.world != null)
         {
             CrashReportCategory.addBlockInfo(reportCategory, this.pos, this.getBlockType(), this.getBlockMetadata());
-            reportCategory.setDetail("Actual block type", new ICrashReportDetail<String>()
+            reportCategory.setDetail("Actual block category", new ICrashReportDetail<String>()
             {
                 public String call() throws Exception
                 {

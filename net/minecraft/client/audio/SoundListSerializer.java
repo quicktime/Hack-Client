@@ -68,10 +68,10 @@ public class SoundListSerializer implements JsonDeserializer<SoundList>
     {
         Sound.Type sound$type = defaultValue;
 
-        if (object.has("type"))
+        if (object.has("category"))
         {
-            sound$type = Sound.Type.getByName(JsonUtils.getString(object, "type"));
-            Validate.notNull(sound$type, "Invalid type", new Object[0]);
+            sound$type = Sound.Type.getByName(JsonUtils.getString(object, "category"));
+            Validate.notNull(sound$type, "Invalid category", new Object[0]);
         }
 
         return sound$type;

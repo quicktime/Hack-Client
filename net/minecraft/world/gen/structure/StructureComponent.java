@@ -31,7 +31,7 @@ public abstract class StructureComponent
     private Mirror mirror;
     private Rotation rotation;
 
-    /** The type ID of this component. */
+    /** The category ID of this component. */
     protected int componentType;
 
     public StructureComponent()
@@ -108,7 +108,7 @@ public abstract class StructureComponent
     }
 
     /**
-     * Returns the component type ID of this component.
+     * Returns the component category ID of this component.
      */
     public int getComponentType()
     {

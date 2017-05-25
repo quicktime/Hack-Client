@@ -259,7 +259,7 @@ public class EntityDataManager
 
         if (i < 0)
         {
-            throw new EncoderException("Unknown serializer type " + dataparameter.getSerializer());
+            throw new EncoderException("Unknown serializer category " + dataparameter.getSerializer());
         }
         else
         {
@@ -287,7 +287,7 @@ public class EntityDataManager
 
             if (dataserializer == null)
             {
-                throw new DecoderException("Unknown serializer type " + j);
+                throw new DecoderException("Unknown serializer category " + j);
             }
 
             list.add(new EntityDataManager.DataEntry(dataserializer.createKey(i), dataserializer.read(buf)));

@@ -303,7 +303,7 @@ public class CraftingManager
             {
                 if (!(object instanceof Block))
                 {
-                    throw new IllegalArgumentException("Invalid shapeless recipe: unknown type " + object.getClass().getName() + "!");
+                    throw new IllegalArgumentException("Invalid shapeless recipe: unknown category " + object.getClass().getName() + "!");
                 }
 
                 list.add(new ItemStack((Block)object));

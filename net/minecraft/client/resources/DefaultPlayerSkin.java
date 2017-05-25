@@ -28,7 +28,7 @@ public class DefaultPlayerSkin
     }
 
     /**
-     * Retrieves the type of skin that a player is using. The Alex model is slim while the Steve model is default.
+     * Retrieves the category of skin that a player is using. The Alex model is slim while the Steve model is default.
      */
     public static String getSkinType(UUID playerUUID)
     {

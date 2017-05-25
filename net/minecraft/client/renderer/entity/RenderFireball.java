@@ -22,7 +22,7 @@ public class RenderFireball extends Render<EntityFireball>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityFireball entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

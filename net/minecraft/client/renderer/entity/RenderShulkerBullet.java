@@ -34,7 +34,7 @@ public class RenderShulkerBullet extends Render<EntityShulkerBullet>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityShulkerBullet entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

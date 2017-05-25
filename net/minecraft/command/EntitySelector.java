@@ -65,7 +65,7 @@ public class EntitySelector
     private static final String field_190846_t = func_190826_c("m");
     private static final String field_190847_u = func_190826_c("team");
     private static final String field_190848_v = func_190826_c("name");
-    private static final String field_190849_w = func_190826_c("type");
+    private static final String field_190849_w = func_190826_c("category");
     private static final String field_190850_x = func_190826_c("tag");
     private static final Predicate<String> field_190851_y = new Predicate<String>()
     {

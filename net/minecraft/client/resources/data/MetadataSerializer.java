@@ -64,7 +64,7 @@ public class MetadataSerializer
     }
 
     /**
-     * Returns a Gson instance with type adapters registered for metadata sections.
+     * Returns a Gson instance with category adapters registered for metadata sections.
      */
     private Gson getGson()
     {

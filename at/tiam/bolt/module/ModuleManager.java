@@ -1,6 +1,7 @@
 package at.tiam.bolt.module;
 
 import at.tiam.bolt.Bolt;
+import at.tiam.bolt.api.PluginData;
 import at.tiam.bolt.module.modules.Step;
 import at.tiam.bolt.module.modules.*;
 import at.tiam.bolt.event.events.EventDisabled;
@@ -9,9 +10,8 @@ import at.tiam.bolt.util.ReflectionUtils;
 
 import com.darkmagician6.eventapi.EventManager;
 
-import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
-import java.lang.reflect.Field;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -54,12 +54,24 @@ public class ModuleManager {
     private void initMod(Module m) {
         if (m.getClass().isAnnotationPresent(RegisterMod.class)) {
             RegisterMod details = m.getClass().getAnnotation(RegisterMod.class);
-            m.setBind(details.defaultKey());
+            m.setKeybind(details.defaultKey());
             m.setName(details.name());
             m.setDescription(details.desc());
             m.setCategory(details.category());
         } else {
             Bolt.getBolt().log("Error - RegisterMod class no found: " + m.getClass().getName());
+        }
+    }
+
+    public void removePluginModules(PluginData data) {
+        Iterator<Module> iterator = modules.iterator();
+
+        while (iterator.hasNext()) {
+            Module module = iterator.next();
+
+            if (module instanceof PluginModule && ((PluginModule) module).getPluginData() == data) {
+                Bolt.getBolt().getModuleManager().modules.remove(module);
+            }
         }
     }
 
@@ -82,12 +94,12 @@ public class ModuleManager {
     }
 
     public void toggle(Module m) {
-        if (m.getState()) {
-            m.setState(true);
+        if (m.isEnabled()) {
+            m.setEnabled(false);
             EventManager.call(new EventDisabled(m));
             m.onDisable();
         } else {
-            m.setState(false);
+            m.setEnabled(true);
             EventManager.call(new EventEnabled(m));
             m.onEnable();
         }

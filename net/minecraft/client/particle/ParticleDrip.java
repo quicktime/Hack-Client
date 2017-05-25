@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 public class ParticleDrip extends Particle
 {
-    /** the material type for dropped items/blocks */
+    /** the material category for dropped items/blocks */
     private final Material materialType;
 
     /** The height of the current bob */

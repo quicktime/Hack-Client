@@ -36,7 +36,7 @@ public class EntityAIFollowOwner extends EntityAIBase
 
         if (!(thePetIn.getNavigator() instanceof PathNavigateGround))
         {
-            throw new IllegalArgumentException("Unsupported mob type for FollowOwnerGoal");
+            throw new IllegalArgumentException("Unsupported mob category for FollowOwnerGoal");
         }
     }
 

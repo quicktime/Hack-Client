@@ -253,7 +253,7 @@ public class ParticleManager
                     return particle.toString();
                 }
             });
-            crashreportcategory.setDetail("Particle Type", new ICrashReportDetail<String>()
+            crashreportcategory.setDetail("Particle Category", new ICrashReportDetail<String>()
             {
                 public String call() throws Exception
                 {
@@ -333,7 +333,7 @@ public class ParticleManager
                                     return particle.toString();
                                 }
                             });
-                            crashreportcategory.setDetail("Particle Type", new ICrashReportDetail<String>()
+                            crashreportcategory.setDetail("Particle Category", new ICrashReportDetail<String>()
                             {
                                 public String call() throws Exception
                                 {

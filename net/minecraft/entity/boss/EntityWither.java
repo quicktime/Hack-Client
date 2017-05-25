@@ -607,7 +607,7 @@ public class EntityWither extends EntityMob implements IRangedAttackMob
     }
 
     /**
-     * Drop 0-2 items of this living's type
+     * Drop 0-2 items of this living's category
      */
     protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier)
     {

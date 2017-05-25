@@ -8,7 +8,7 @@ import com.google.common.reflect.ClassPath;
  */
 public class ReflectionUtils {
 
-    public static ArrayList<Class<?>> getClasses(final String packageName){
+    public static ArrayList<Class<?>> getClasses(final String packageName) {
         final ArrayList<Class<?>> classes = new ArrayList<Class<?>>();
         try {
             final ClassLoader loader = Thread.currentThread().getContextClassLoader();

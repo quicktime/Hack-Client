@@ -46,7 +46,7 @@ public class LanguageMetadataSectionSerializer extends BaseMetadataSectionSerial
     }
 
     /**
-     * The name of this section type as it appears in JSON.
+     * The name of this section category as it appears in JSON.
      */
     public String getSectionName()
     {

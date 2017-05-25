@@ -80,7 +80,7 @@ public class Block
     protected boolean enableStats;
 
     /**
-     * Flags whether or not this block is of a type that needs random ticking. Ref-counted by ExtendedBlockStorage in
+     * Flags whether or not this block is of a category that needs random ticking. Ref-counted by ExtendedBlockStorage in
      * order to broadly cull a chunk from the random chunk update list for efficiency's sake.
      */
     protected boolean needsRandomTick;
@@ -395,7 +395,7 @@ public class Block
     @Deprecated
 
     /**
-     * The type of render function called. MODEL for mixed tesr and static model, MODELBLOCK_ANIMATED for TESR-only,
+     * The category of render function called. MODEL for mixed tesr and static model, MODELBLOCK_ANIMATED for TESR-only,
      * LIQUID for vanilla liquids, INVISIBLE to skip all rendering
      */
     public EnumBlockRenderType getRenderType(IBlockState state)
@@ -439,7 +439,7 @@ public class Block
     }
 
     /**
-     * Sets whether this block type will receive random update ticks
+     * Sets whether this block category will receive random update ticks
      */
     protected Block setTickRandomly(boolean shouldTick)
     {
@@ -448,7 +448,7 @@ public class Block
     }
 
     /**
-     * Returns whether or not this block is of a type that needs random ticking. Called for ref-counting purposes by
+     * Returns whether or not this block is of a category that needs random ticking. Called for ref-counting purposes by
      * ExtendedBlockStorage in order to broadly cull a chunk from the random chunk update list for efficiency's sake.
      */
     public boolean getTickRandomly()

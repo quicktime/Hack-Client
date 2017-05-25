@@ -13,7 +13,7 @@ import net.minecraft.util.NonNullList;
 
 public class BlockRedSandstone extends Block
 {
-    public static final PropertyEnum<BlockRedSandstone.EnumType> TYPE = PropertyEnum.<BlockRedSandstone.EnumType>create("type", BlockRedSandstone.EnumType.class);
+    public static final PropertyEnum<BlockRedSandstone.EnumType> TYPE = PropertyEnum.<BlockRedSandstone.EnumType>create("category", BlockRedSandstone.EnumType.class);
 
     public BlockRedSandstone()
     {

@@ -17,7 +17,7 @@ public class PlacementSettings
     @Nullable
 
     /**
-     * the type of block in the world that will get replaced by the structure
+     * the category of block in the world that will get replaced by the structure
      */
     private Block replacedBlock;
     @Nullable

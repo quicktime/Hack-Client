@@ -41,15 +41,15 @@ public class ItemFireworkCharge extends Item
 
     public static void addExplosionInfo(NBTTagCompound nbt, List<String> tooltip)
     {
-        byte b0 = nbt.getByte("Type");
+        byte b0 = nbt.getByte("Category");
 
         if (b0 >= 0 && b0 <= 4)
         {
-            tooltip.add(I18n.translateToLocal("item.fireworksCharge.type." + b0).trim());
+            tooltip.add(I18n.translateToLocal("item.fireworksCharge.category." + b0).trim());
         }
         else
         {
-            tooltip.add(I18n.translateToLocal("item.fireworksCharge.type").trim());
+            tooltip.add(I18n.translateToLocal("item.fireworksCharge.category").trim());
         }
 
         int[] aint = nbt.getIntArray("Colors");

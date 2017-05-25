@@ -1431,7 +1431,7 @@ public abstract class Entity implements ICommandSender
     }
 
     /**
-     * Checks if the current block the entity is within of the specified material type
+     * Checks if the current block the entity is within of the specified material category
      */
     public boolean isInsideOfMaterial(Material materialIn)
     {
@@ -3015,7 +3015,7 @@ public abstract class Entity implements ICommandSender
 
     public void addEntityCrashInfo(CrashReportCategory category)
     {
-        category.setDetail("Entity Type", new ICrashReportDetail<String>()
+        category.setDetail("Entity Category", new ICrashReportDetail<String>()
         {
             public String call() throws Exception
             {
@@ -3177,7 +3177,7 @@ public abstract class Entity implements ICommandSender
 
         if (resourcelocation != null)
         {
-            nbttagcompound.setString("type", resourcelocation.toString());
+            nbttagcompound.setString("category", resourcelocation.toString());
         }
 
         nbttagcompound.setString("name", this.getName());

@@ -245,7 +245,7 @@ public class ShaderUniform
         {
             if (this.uniformType > 10)
             {
-                LOGGER.warn("Uniform.upload called, but type value ({}) is not a valid type. Ignoring.", new Object[] {Integer.valueOf(this.uniformType)});
+                LOGGER.warn("Uniform.upload called, but category value ({}) is not a valid category. Ignoring.", new Object[] {Integer.valueOf(this.uniformType)});
                 return;
             }
 

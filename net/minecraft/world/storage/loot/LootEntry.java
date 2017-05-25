@@ -46,7 +46,7 @@ public abstract class LootEntry
         public LootEntry deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_) throws JsonParseException
         {
             JsonObject jsonobject = JsonUtils.getJsonObject(p_deserialize_1_, "loot item");
-            String s = JsonUtils.getString(jsonobject, "type");
+            String s = JsonUtils.getString(jsonobject, "category");
             int i = JsonUtils.getInt(jsonobject, "weight", 1);
             int j = JsonUtils.getInt(jsonobject, "quality", 0);
             LootCondition[] alootcondition;
@@ -74,7 +74,7 @@ public abstract class LootEntry
             }
             else
             {
-                throw new JsonSyntaxException("Unknown loot entry type \'" + s + "\'");
+                throw new JsonSyntaxException("Unknown loot entry category \'" + s + "\'");
             }
         }
 
@@ -91,11 +91,11 @@ public abstract class LootEntry
 
             if (p_serialize_1_ instanceof LootEntryItem)
             {
-                jsonobject.addProperty("type", "item");
+                jsonobject.addProperty("category", "item");
             }
             else if (p_serialize_1_ instanceof LootEntryTable)
             {
-                jsonobject.addProperty("type", "item");
+                jsonobject.addProperty("category", "item");
             }
             else
             {
@@ -104,7 +104,7 @@ public abstract class LootEntry
                     throw new IllegalArgumentException("Don\'t know how to serialize " + p_serialize_1_);
                 }
 
-                jsonobject.addProperty("type", "empty");
+                jsonobject.addProperty("category", "empty");
             }
 
             p_serialize_1_.serialize(jsonobject, p_serialize_3_);

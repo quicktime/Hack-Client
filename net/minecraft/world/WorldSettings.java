@@ -82,7 +82,7 @@ public final class WorldSettings
     }
 
     /**
-     * Gets the game type.
+     * Gets the game category.
      */
     public GameType getGameType()
     {

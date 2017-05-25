@@ -36,12 +36,12 @@ public class SpawnerEntityTypes implements IFixableData
                 {
                     NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
 
-                    if (nbttagcompound1.hasKey("Type", 8))
+                    if (nbttagcompound1.hasKey("Category", 8))
                     {
                         NBTTagCompound nbttagcompound2 = nbttagcompound1.getCompoundTag("Properties");
-                        nbttagcompound2.setString("id", nbttagcompound1.getString("Type"));
+                        nbttagcompound2.setString("id", nbttagcompound1.getString("Category"));
                         nbttagcompound1.setTag("Entity", nbttagcompound2);
-                        nbttagcompound1.removeTag("Type");
+                        nbttagcompound1.removeTag("Category");
                         nbttagcompound1.removeTag("Properties");
                     }
                 }

@@ -5,7 +5,7 @@ import com.darkmagician6.eventapi.types.Priority;
 import java.lang.annotation.*;
 
 /**
- * Marks a method so that the EventManagerOld knows that it should be registered.
+ * Marks a method so that the EventManager knows that it should be registered.
  * The priority of the method is also set with this.
  *
  * @author DarkMagician6

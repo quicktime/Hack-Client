@@ -90,7 +90,7 @@ public class EntityAIMate extends EntityAIBase
     }
 
     /**
-     * Loops through nearby animals and finds another animal of the same type that can be mated with. Returns the first
+     * Loops through nearby animals and finds another animal of the same category that can be mated with. Returns the first
      * valid mate found.
      */
     private EntityAnimal getNearbyMate()
@@ -112,7 +112,7 @@ public class EntityAIMate extends EntityAIBase
     }
 
     /**
-     * Spawns a baby animal of the same type.
+     * Spawns a baby animal of the same category.
      */
     private void spawnBaby()
     {

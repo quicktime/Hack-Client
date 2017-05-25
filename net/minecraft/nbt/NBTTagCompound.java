@@ -71,7 +71,7 @@ public class NBTTagCompound extends NBTBase
     }
 
     /**
-     * Gets the type byte for the tag.
+     * Gets the category byte for the tag.
      */
     public byte getId()
     {
@@ -214,7 +214,7 @@ public class NBTTagCompound extends NBTBase
     }
 
     /**
-     * Returns whether the given string has been previously stored as a key in this tag compound as a particular type,
+     * Returns whether the given string has been previously stored as a key in this tag compound as a particular category,
      * denoted by a parameter in the form of an ordinal. If the provided ordinal is 99, this method will match tag types
      * representing numbers.
      */
@@ -509,14 +509,14 @@ public class NBTTagCompound extends NBTBase
     {
         CrashReport crashreport = CrashReport.makeCrashReport(ex, "Reading NBT data");
         CrashReportCategory crashreportcategory = crashreport.makeCategoryDepth("Corrupt NBT tag", 1);
-        crashreportcategory.setDetail("Tag type found", new ICrashReportDetail<String>()
+        crashreportcategory.setDetail("Tag category found", new ICrashReportDetail<String>()
         {
             public String call() throws Exception
             {
                 return NBTBase.NBT_TYPES[((NBTBase)NBTTagCompound.this.tagMap.get(key)).getId()];
             }
         });
-        crashreportcategory.setDetail("Tag type expected", new ICrashReportDetail<String>()
+        crashreportcategory.setDetail("Tag category expected", new ICrashReportDetail<String>()
         {
             public String call() throws Exception
             {
@@ -595,7 +595,7 @@ public class NBTTagCompound extends NBTBase
             CrashReport crashreport = CrashReport.makeCrashReport(ioexception, "Loading NBT data");
             CrashReportCategory crashreportcategory = crashreport.makeCategory("NBT Tag");
             crashreportcategory.addCrashSection("Tag name", key);
-            crashreportcategory.addCrashSection("Tag type", Byte.valueOf(id));
+            crashreportcategory.addCrashSection("Tag category", Byte.valueOf(id));
             throw new ReportedException(crashreport);
         }
     }

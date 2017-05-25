@@ -33,7 +33,7 @@ public class NBTTagLong extends NBTPrimitive
     }
 
     /**
-     * Gets the type byte for the tag.
+     * Gets the category byte for the tag.
      */
     public byte getId()
     {

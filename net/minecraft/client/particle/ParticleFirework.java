@@ -187,7 +187,7 @@ public class ParticleFirework
                     {
                         NBTTagCompound nbttagcompound = this.fireworkExplosions.getCompoundTagAt(i);
 
-                        if (nbttagcompound.getByte("Type") == 1)
+                        if (nbttagcompound.getByte("Category") == 1)
                         {
                             flag1 = true;
                             break;
@@ -213,7 +213,7 @@ public class ParticleFirework
             {
                 int k = this.fireworkAge / 2;
                 NBTTagCompound nbttagcompound1 = this.fireworkExplosions.getCompoundTagAt(k);
-                int l = nbttagcompound1.getByte("Type");
+                int l = nbttagcompound1.getByte("Category");
                 boolean flag4 = nbttagcompound1.getBoolean("Trail");
                 boolean flag2 = nbttagcompound1.getBoolean("Flicker");
                 int[] aint = nbttagcompound1.getIntArray("Colors");

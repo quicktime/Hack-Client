@@ -45,7 +45,7 @@ public class FontRenderer implements IResourceManagerReloadListener
      * drop shadows.
      */
     private final int[] colorCode = new int[32];
-    private final ResourceLocation locationFontTexture;
+    public final ResourceLocation locationFontTexture;
 
     /** The RenderEngine used to load and setup glyph textures. */
     private final TextureManager renderEngine;

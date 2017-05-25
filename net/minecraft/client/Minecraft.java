@@ -2806,7 +2806,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
     }
 
     /**
-     * adds core server Info (GL version , Texture pack, isModded, type), and the worldInfo to the crash report
+     * adds core server Info (GL version , Texture pack, isModded, category), and the worldInfo to the crash report
      */
     public CrashReport addGraphicsAndWorldToCrashReport(CrashReport theCrash)
     {
@@ -2853,7 +2853,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
                 return !"vanilla".equals(s) ? "Definitely; Client brand changed to \'" + s + "\'" : (Minecraft.class.getSigners() == null ? "Very likely; Jar signature invalidated" : "Probably not. Jar signature remains and client brand is untouched.");
             }
         });
-        theCrash.getCategory().setDetail("Type", new ICrashReportDetail<String>()
+        theCrash.getCategory().setDetail("Category", new ICrashReportDetail<String>()
         {
             public String call() throws Exception
             {

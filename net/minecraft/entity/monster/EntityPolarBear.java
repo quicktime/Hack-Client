@@ -54,7 +54,7 @@ public class EntityPolarBear extends EntityAnimal
 
     /**
      * Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on
-     * the animal type)
+     * the animal category)
      */
     public boolean isBreedingItem(ItemStack stack)
     {

@@ -17,7 +17,7 @@ public class EntityAIRestrictOpenDoor extends EntityAIBase
 
         if (!(creatureIn.getNavigator() instanceof PathNavigateGround))
         {
-            throw new IllegalArgumentException("Unsupported mob type for RestrictOpenDoorGoal");
+            throw new IllegalArgumentException("Unsupported mob category for RestrictOpenDoorGoal");
         }
     }
 

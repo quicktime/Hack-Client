@@ -19,7 +19,7 @@ public class VertexFormatElement
         }
         else
         {
-            LOGGER.warn("Multiple vertex elements of the same type other than UVs are not supported. Forcing type to UV.");
+            LOGGER.warn("Multiple vertex elements of the same category other than UVs are not supported. Forcing category to UV.");
             this.usage = VertexFormatElement.EnumUsage.UV;
         }
 

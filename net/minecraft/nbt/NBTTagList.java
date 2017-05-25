@@ -14,7 +14,7 @@ public class NBTTagList extends NBTBase
     private List<NBTBase> tagList = Lists.<NBTBase>newArrayList();
 
     /**
-     * The type byte for the tags in the list - they must all be of the same type.
+     * The category byte for the tags in the list - they must all be of the same category.
      */
     private byte tagType = 0;
 
@@ -56,7 +56,7 @@ public class NBTTagList extends NBTBase
 
             if (this.tagType == 0 && i > 0)
             {
-                throw new RuntimeException("Missing type on ListTag");
+                throw new RuntimeException("Missing category on ListTag");
             }
             else
             {
@@ -74,7 +74,7 @@ public class NBTTagList extends NBTBase
     }
 
     /**
-     * Gets the type byte for the tag.
+     * Gets the category byte for the tag.
      */
     public byte getId()
     {
@@ -99,7 +99,7 @@ public class NBTTagList extends NBTBase
     }
 
     /**
-     * Adds the provided tag to the end of the list. There is no check to verify this tag is of the same type as any
+     * Adds the provided tag to the end of the list. There is no check to verify this tag is of the same category as any
      * previous tag.
      */
     public void appendTag(NBTBase nbt)

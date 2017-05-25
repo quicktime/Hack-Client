@@ -82,7 +82,7 @@ public class RenderDragon extends RenderLiving<EntityDragon>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityDragon entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

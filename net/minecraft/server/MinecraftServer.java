@@ -1300,7 +1300,7 @@ public abstract class MinecraftServer implements Runnable, ICommandSender, IThre
     }
 
     /**
-     * Sets the game type for all worlds.
+     * Sets the game category for all worlds.
      */
     public void setGameType(GameType gameMode)
     {

@@ -52,7 +52,7 @@ public class RenderPlayer extends RenderLivingBase<AbstractClientPlayer>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(AbstractClientPlayer entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

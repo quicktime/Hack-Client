@@ -213,7 +213,7 @@ public class CrashReportCategory
     public static void addBlockInfo(CrashReportCategory category, final BlockPos pos, final Block blockIn, final int blockData)
     {
         final int i = Block.getIdFromBlock(blockIn);
-        category.setDetail("Block type", new ICrashReportDetail<String>()
+        category.setDetail("Block category", new ICrashReportDetail<String>()
         {
             public String call() throws Exception
             {

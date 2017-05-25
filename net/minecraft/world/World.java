@@ -577,7 +577,7 @@ public abstract class World implements IBlockAccess
             {
                 CrashReport crashreport = CrashReport.makeCrashReport(throwable, "Exception while updating neighbours");
                 CrashReportCategory crashreportcategory = crashreport.makeCategory("Block being updated");
-                crashreportcategory.setDetail("Source block type", new ICrashReportDetail<String>()
+                crashreportcategory.setDetail("Source block category", new ICrashReportDetail<String>()
                 {
                     public String call() throws Exception
                     {
@@ -613,7 +613,7 @@ public abstract class World implements IBlockAccess
                 {
                     CrashReport crashreport = CrashReport.makeCrashReport(throwable, "Exception while updating neighbours");
                     CrashReportCategory crashreportcategory = crashreport.makeCategory("Block being updated");
-                    crashreportcategory.setDetail("Source block type", new ICrashReportDetail<String>()
+                    crashreportcategory.setDetail("Source block category", new ICrashReportDetail<String>()
                     {
                         public String call() throws Exception
                         {
@@ -3727,7 +3727,7 @@ public abstract class World implements IBlockAccess
             CrashReportCategory crashreportcategory = crashreport.makeCategory("Level event being played");
             crashreportcategory.addCrashSection("Block coordinates", CrashReportCategory.getCoordinateInfo(pos));
             crashreportcategory.addCrashSection("EventOld source", player);
-            crashreportcategory.addCrashSection("EventOld type", Integer.valueOf(type));
+            crashreportcategory.addCrashSection("EventOld category", Integer.valueOf(type));
             crashreportcategory.addCrashSection("EventOld data", Integer.valueOf(data));
             throw new ReportedException(crashreport);
         }

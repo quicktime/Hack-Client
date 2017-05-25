@@ -31,7 +31,7 @@ public abstract class EntityAIDoorInteract extends EntityAIBase
 
         if (!(entityIn.getNavigator() instanceof PathNavigateGround))
         {
-            throw new IllegalArgumentException("Unsupported mob type for DoorInteractGoal");
+            throw new IllegalArgumentException("Unsupported mob category for DoorInteractGoal");
         }
     }
 

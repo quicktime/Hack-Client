@@ -94,13 +94,13 @@ public class NetworkSystem
             {
                 oclass = EpollServerSocketChannel.class;
                 lazyloadbase = SERVER_EPOLL_EVENTLOOP;
-                LOGGER.info("Using epoll channel type");
+                LOGGER.info("Using epoll channel category");
             }
             else
             {
                 oclass = NioServerSocketChannel.class;
                 lazyloadbase = SERVER_NIO_EVENTLOOP;
-                LOGGER.info("Using default channel type");
+                LOGGER.info("Using default channel category");
             }
 
             this.endpoints.add(((ServerBootstrap)((ServerBootstrap)(new ServerBootstrap()).channel(oclass)).childHandler(new ChannelInitializer<Channel>()

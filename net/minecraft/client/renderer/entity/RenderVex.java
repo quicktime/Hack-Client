@@ -26,7 +26,7 @@ public class RenderVex extends RenderBiped<EntityVex>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityVex entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

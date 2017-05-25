@@ -62,7 +62,7 @@ public abstract class BlockFlower extends BlockBush
     }
 
     /**
-     * Get the Type of this flower (Yellow/Red)
+     * Get the Category of this flower (Yellow/Red)
      */
     public abstract BlockFlower.EnumFlowerColor getBlockType();
 
@@ -70,7 +70,7 @@ public abstract class BlockFlower extends BlockBush
     {
         if (this.type == null)
         {
-            this.type = PropertyEnum.<BlockFlower.EnumFlowerType>create("type", BlockFlower.EnumFlowerType.class, new Predicate<BlockFlower.EnumFlowerType>()
+            this.type = PropertyEnum.<BlockFlower.EnumFlowerType>create("category", BlockFlower.EnumFlowerType.class, new Predicate<BlockFlower.EnumFlowerType>()
             {
                 public boolean apply(@Nullable BlockFlower.EnumFlowerType p_apply_1_)
                 {

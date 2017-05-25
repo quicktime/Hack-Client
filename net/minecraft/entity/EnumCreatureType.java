@@ -18,10 +18,10 @@ public enum EnumCreatureType
     private final int maxNumberOfCreature;
     private final Material creatureMaterial;
 
-    /** A flag indicating whether this creature type is peaceful. */
+    /** A flag indicating whether this creature category is peaceful. */
     private final boolean isPeacefulCreature;
 
-    /** Whether this creature type is an animal. */
+    /** Whether this creature category is an animal. */
     private final boolean isAnimal;
 
     private EnumCreatureType(Class <? extends IAnimals > creatureClassIn, int maxNumberOfCreatureIn, Material creatureMaterialIn, boolean isPeacefulCreatureIn, boolean isAnimalIn)
@@ -44,7 +44,7 @@ public enum EnumCreatureType
     }
 
     /**
-     * Gets whether or not this creature type is peaceful.
+     * Gets whether or not this creature category is peaceful.
      */
     public boolean getPeacefulCreature()
     {
@@ -52,7 +52,7 @@ public enum EnumCreatureType
     }
 
     /**
-     * Return whether this creature type is an animal.
+     * Return whether this creature category is an animal.
      */
     public boolean getAnimal()
     {

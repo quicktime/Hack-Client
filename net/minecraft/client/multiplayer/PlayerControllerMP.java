@@ -67,7 +67,7 @@ public class PlayerControllerMP
     /** Tells if the player is hitting a block */
     private boolean isHittingBlock;
 
-    /** Current game type for the player */
+    /** Current game category for the player */
     private GameType currentGameType = GameType.SURVIVAL;
 
     /** Index of the current item held by the player in the inventory hotbar */
@@ -104,7 +104,7 @@ public class PlayerControllerMP
     }
 
     /**
-     * Sets the game type for the player.
+     * Sets the game category for the player.
      */
     public void setGameType(GameType type)
     {

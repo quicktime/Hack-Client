@@ -65,7 +65,7 @@ public class RenderArmorStand extends RenderLivingBase<EntityArmorStand>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityArmorStand entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

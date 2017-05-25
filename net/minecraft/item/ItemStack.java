@@ -56,7 +56,7 @@ public final class ItemStack
     /**
      * Number of animation frames to go when receiving an item (by walking into it, for example).
      */
-    private int animationsToGo;
+    public int animationsToGo;
     private final Item item;
 
     /**

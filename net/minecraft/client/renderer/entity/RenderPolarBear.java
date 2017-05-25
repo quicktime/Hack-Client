@@ -23,7 +23,7 @@ public class RenderPolarBear extends RenderLiving<EntityPolarBear>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityPolarBear entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

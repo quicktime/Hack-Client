@@ -226,7 +226,7 @@ public class ItemMonsterPlacer extends Item
     @Nullable
 
     /**
-     * Spawns the creature specified by the egg's type in the location specified by the last three parameters.
+     * Spawns the creature specified by the egg's category in the location specified by the last three parameters.
      * Parameters: world, entityID, x, y, z.
      */
     public static Entity spawnCreature(World worldIn, @Nullable ResourceLocation entityID, double x, double y, double z)

@@ -5,24 +5,24 @@ public class WorldType
     /** List of world types. */
     public static final WorldType[] WORLD_TYPES = new WorldType[16];
 
-    /** Default world type. */
+    /** Default world category. */
     public static final WorldType DEFAULT = (new WorldType(0, "default", 1)).setVersioned();
 
-    /** Flat world type. */
+    /** Flat world category. */
     public static final WorldType FLAT = new WorldType(1, "flat");
 
-    /** Large Biome world Type. */
+    /** Large Biome world Category. */
     public static final WorldType LARGE_BIOMES = new WorldType(2, "largeBiomes");
 
-    /** amplified world type */
+    /** amplified world category */
     public static final WorldType AMPLIFIED = (new WorldType(3, "amplified")).setNotificationData();
     public static final WorldType CUSTOMIZED = new WorldType(4, "customized");
     public static final WorldType DEBUG_WORLD = new WorldType(5, "debug_all_block_states");
 
-    /** Default (1.1) world type. */
+    /** Default (1.1) world category. */
     public static final WorldType DEFAULT_1_1 = (new WorldType(8, "default_1_1", 0)).setCanBeCreated(false);
 
-    /** ID for this world type. */
+    /** ID for this world category. */
     private final int worldTypeId;
     private final String worldType;
 
@@ -30,7 +30,7 @@ public class WorldType
     private final int generatorVersion;
 
     /**
-     * Whether this world type can be generated. Normally true; set to false for out-of-date generator versions.
+     * Whether this world category can be generated. Normally true; set to false for out-of-date generator versions.
      */
     private boolean canBeCreated;
 
@@ -58,7 +58,7 @@ public class WorldType
     }
 
     /**
-     * Gets the translation key for the name of this world type.
+     * Gets the translation key for the name of this world category.
      */
     public String getTranslateName()
     {
@@ -66,7 +66,7 @@ public class WorldType
     }
 
     /**
-     * Gets the translation key for the info text for this world type.
+     * Gets the translation key for the info text for this world category.
      */
     public String getTranslatedInfo()
     {
@@ -104,7 +104,7 @@ public class WorldType
     }
 
     /**
-     * Flags this world type as having an associated version.
+     * Flags this world category as having an associated version.
      */
     private WorldType setVersioned()
     {
@@ -113,7 +113,7 @@ public class WorldType
     }
 
     /**
-     * Returns true if this world Type has a version associated with it.
+     * Returns true if this world Category has a version associated with it.
      */
     public boolean isVersioned()
     {

@@ -17,7 +17,7 @@ public class RenderSlime extends RenderLiving<EntitySlime>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntitySlime entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

@@ -75,7 +75,7 @@ public class WorldInfo
     /** Number of ticks untils next thunderbolt. */
     private int thunderTime;
 
-    /** The Game Type. */
+    /** The Game Category. */
     private GameType theGameType;
 
     /**

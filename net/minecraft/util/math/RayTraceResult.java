@@ -8,7 +8,7 @@ public class RayTraceResult
     private BlockPos blockPos;
 
     /**
-     * The type of hit that occured, see {@link RayTraceResult#Type} for possibilities.
+     * The category of hit that occured, see {@link RayTraceResult#Type} for possibilities.
      */
     public RayTraceResult.Type typeOfHit;
     public EnumFacing sideHit;
@@ -56,7 +56,7 @@ public class RayTraceResult
 
     public String toString()
     {
-        return "HitResult{type=" + this.typeOfHit + ", blockpos=" + this.blockPos + ", f=" + this.sideHit + ", pos=" + this.hitVec + ", entity=" + this.entityHit + '}';
+        return "HitResult{category=" + this.typeOfHit + ", blockpos=" + this.blockPos + ", f=" + this.sideHit + ", pos=" + this.hitVec + ", entity=" + this.entityHit + '}';
     }
 
     public static enum Type

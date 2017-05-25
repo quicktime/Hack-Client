@@ -44,7 +44,7 @@ public class ItemArmor extends Item
     };
 
     /**
-     * Stores the armor type: 0 is helmet, 1 is plate, 2 is legs and 3 is boots
+     * Stores the armor category: 0 is helmet, 1 is plate, 2 is legs and 3 is boots
      */
     public final EntityEquipmentSlot armorType;
 
@@ -100,7 +100,7 @@ public class ItemArmor extends Item
     }
 
     /**
-     * Gets the equipment slot of this armor piece (formerly known as armor type)
+     * Gets the equipment slot of this armor piece (formerly known as armor category)
      */
     public EntityEquipmentSlot getEquipmentSlot()
     {

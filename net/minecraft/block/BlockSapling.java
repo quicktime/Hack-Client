@@ -28,7 +28,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class BlockSapling extends BlockBush implements IGrowable
 {
-    public static final PropertyEnum<BlockPlanks.EnumType> TYPE = PropertyEnum.<BlockPlanks.EnumType>create("type", BlockPlanks.EnumType.class);
+    public static final PropertyEnum<BlockPlanks.EnumType> TYPE = PropertyEnum.<BlockPlanks.EnumType>create("category", BlockPlanks.EnumType.class);
     public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
     protected static final AxisAlignedBB SAPLING_AABB = new AxisAlignedBB(0.09999999403953552D, 0.0D, 0.09999999403953552D, 0.8999999761581421D, 0.800000011920929D, 0.8999999761581421D);
 
@@ -203,7 +203,7 @@ public class BlockSapling extends BlockBush implements IGrowable
     }
 
     /**
-     * Check whether the given BlockPos has a Sapling of the given type
+     * Check whether the given BlockPos has a Sapling of the given category
      */
     public boolean isTypeAt(World worldIn, BlockPos pos, BlockPlanks.EnumType type)
     {

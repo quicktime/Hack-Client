@@ -109,7 +109,7 @@ public abstract class BlockSlab extends Block
     }
 
     /**
-     * Returns the slab block name with the type associated with it
+     * Returns the slab block name with the category associated with it
      */
     public abstract String getUnlocalizedName(int meta);
 

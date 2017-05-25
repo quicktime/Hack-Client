@@ -812,7 +812,7 @@ public class EntityBoat extends Entity
      */
     protected void writeEntityToNBT(NBTTagCompound compound)
     {
-        compound.setString("Type", this.getBoatType().getName());
+        compound.setString("Category", this.getBoatType().getName());
     }
 
     /**
@@ -820,9 +820,9 @@ public class EntityBoat extends Entity
      */
     protected void readEntityFromNBT(NBTTagCompound compound)
     {
-        if (compound.hasKey("Type", 8))
+        if (compound.hasKey("Category", 8))
         {
-            this.setBoatType(EntityBoat.Type.getTypeFromString(compound.getString("Type")));
+            this.setBoatType(EntityBoat.Type.getTypeFromString(compound.getString("Category")));
         }
     }
 

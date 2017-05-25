@@ -181,7 +181,7 @@ public class SoundHandler implements IResourceManagerReloadListener, ITickable
 
                     break;
                 default:
-                    throw new IllegalStateException("Unknown SoundEventRegistration type: " + sound.getType());
+                    throw new IllegalStateException("Unknown SoundEventRegistration category: " + sound.getType());
             }
 
             soundeventaccessor.addSound(isoundeventaccessor);

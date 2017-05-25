@@ -16,7 +16,7 @@ public class RenderLeashKnot extends Render<EntityLeashKnot>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityLeashKnot entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

@@ -6,6 +6,10 @@ import at.tiam.bolt.Bolt;
 import java.util.List;
 import java.util.ArrayList;
 
+import at.tiam.bolt.util.GuiUtils;
+import net.minecraft.client.audio.Sound;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.util.SoundEvent;
 import org.lwjgl.opengl.GL11;
 
 /**
@@ -46,10 +50,8 @@ public class Window implements IRectangle {
 
             Bolt.getBolt().getFontRenderer().drawStringWithShadow(title,
                     posX + 3,
-                    // TODO: Create ColorType class (at.tiam.bolt.gui)
                     posY + TITLE_SIZE/2 - Bolt.getBolt().getFontRenderer().FONT_HEIGHT/2,
-                    ColourType.TITLE_TEXT.getColour(),
-                    true);
+                    ColorType.TITLE_TEXT.getColor());
 
             //Toggle extension
             if(hasExtensionButton()){
@@ -73,7 +75,6 @@ public class Window implements IRectangle {
     }
 
     protected void drawButton(int x, int y, int x1, int y1, boolean enabled) {
-        // TODO: Create GuiUtils class (at.tiam.bolt.util)
         GuiUtils.drawRect(x, y, x1, y1, enabled? 0x9FFFFFFF:0x4FFFFFFF);
     }
 
@@ -151,8 +152,7 @@ public class Window implements IRectangle {
     }
 
     protected void doClickSound(){
-        // TODO: FIX THIS
-        Bolt.getBolt().getMc().player.playSound("random.click", 1, 1);
+        Bolt.getBolt().getMc().player.playSound(SoundEvents.UI_BUTTON_CLICK, 1, 1);
     }
 
     protected void mouseReleased(int mouseX, int mouseY, int state) {

@@ -72,7 +72,7 @@ public class DamageSource
     }
 
     /**
-     * returns an EntityDamageSource of type player
+     * returns an EntityDamageSource of category player
      */
     public static DamageSource causePlayerDamage(EntityPlayer player)
     {
@@ -132,7 +132,7 @@ public class DamageSource
     }
 
     /**
-     * Define the damage type as projectile based.
+     * Define the damage category as projectile based.
      */
     public DamageSource setProjectile()
     {
@@ -219,7 +219,7 @@ public class DamageSource
     }
 
     /**
-     * Define the damage type as fire based.
+     * Define the damage category as fire based.
      */
     protected DamageSource setFireDamage()
     {
@@ -247,7 +247,7 @@ public class DamageSource
     }
 
     /**
-     * Return the name of damage type.
+     * Return the name of damage category.
      */
     public String getDamageType()
     {
@@ -280,7 +280,7 @@ public class DamageSource
     }
 
     /**
-     * Define the damage type as magic based.
+     * Define the damage category as magic based.
      */
     public DamageSource setMagicDamage()
     {

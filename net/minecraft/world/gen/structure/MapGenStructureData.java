@@ -27,7 +27,7 @@ public class MapGenStructureData extends WorldSavedData
     }
 
     /**
-     * Writes the NBT tag of an instance of this structure type to the internal NBT tag, using the chunkcoordinates as
+     * Writes the NBT tag of an instance of this structure category to the internal NBT tag, using the chunkcoordinates as
      * the key
      */
     public void writeInstance(NBTTagCompound tagCompoundIn, int chunkX, int chunkZ)

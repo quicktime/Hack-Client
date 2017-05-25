@@ -1368,7 +1368,7 @@ public abstract class EntityLivingBase extends Entity
     }
 
     /**
-     * Drop 0-2 items of this living's type
+     * Drop 0-2 items of this living's category
      */
     protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier)
     {

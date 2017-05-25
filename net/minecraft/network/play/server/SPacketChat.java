@@ -58,7 +58,7 @@ public class SPacketChat implements Packet<INetHandlerPlayClient>
     }
 
     /**
-     * This method returns true if the type is SYSTEM or ABOVE_HOTBAR, and false if CHAT
+     * This method returns true if the category is SYSTEM or ABOVE_HOTBAR, and false if CHAT
      */
     public boolean isSystem()
     {

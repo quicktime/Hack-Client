@@ -17,7 +17,7 @@ public class RenderDragonFireball extends Render<EntityDragonFireball>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(EntityDragonFireball entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

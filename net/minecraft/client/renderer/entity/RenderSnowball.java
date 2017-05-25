@@ -22,7 +22,7 @@ public class RenderSnowball<T extends Entity> extends Render<T>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(T entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

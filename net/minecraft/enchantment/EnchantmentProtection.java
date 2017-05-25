@@ -9,7 +9,7 @@ import net.minecraft.util.math.MathHelper;
 public class EnchantmentProtection extends Enchantment
 {
     /**
-     * Defines the type of protection of the enchantment, 0 = all, 1 = fire, 2 = fall (feather fall), 3 = explosion and
+     * Defines the category of protection of the enchantment, 0 = all, 1 = fire, 2 = fall (feather fall), 3 = explosion and
      * 4 = projectile.
      */
     public final EnchantmentProtection.Type protectionType;

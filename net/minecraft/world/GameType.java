@@ -22,7 +22,7 @@ public enum GameType
     }
 
     /**
-     * Returns the ID of this game type
+     * Returns the ID of this game category
      */
     public int getID()
     {
@@ -30,7 +30,7 @@ public enum GameType
     }
 
     /**
-     * Returns the name of this game type
+     * Returns the name of this game category
      */
     public String getName()
     {
@@ -38,7 +38,7 @@ public enum GameType
     }
 
     /**
-     * Configures the player capabilities based on the game type
+     * Configures the player capabilities based on the game category
      */
     public void configurePlayerCapabilities(PlayerCapabilities capabilities)
     {
@@ -67,7 +67,7 @@ public enum GameType
     }
 
     /**
-     * Returns true if this is the ADVENTURE game type
+     * Returns true if this is the ADVENTURE game category
      */
     public boolean isAdventure()
     {
@@ -75,7 +75,7 @@ public enum GameType
     }
 
     /**
-     * Returns true if this is the CREATIVE game type
+     * Returns true if this is the CREATIVE game category
      */
     public boolean isCreative()
     {
@@ -83,7 +83,7 @@ public enum GameType
     }
 
     /**
-     * Returns true if this is the SURVIVAL or ADVENTURE game type
+     * Returns true if this is the SURVIVAL or ADVENTURE game category
      */
     public boolean isSurvivalOrAdventure()
     {
@@ -91,7 +91,7 @@ public enum GameType
     }
 
     /**
-     * Gets the game type by it's ID. Will be survival if none was found.
+     * Gets the game category by it's ID. Will be survival if none was found.
      */
     public static GameType getByID(int idIn)
     {
@@ -112,7 +112,7 @@ public enum GameType
     }
 
     /**
-     * Gets the game type registered with the specified name. If no matches were found, survival will be returned.
+     * Gets the game category registered with the specified name. If no matches were found, survival will be returned.
      */
     public static GameType getByName(String gamemodeName)
     {

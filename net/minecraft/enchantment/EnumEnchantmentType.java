@@ -101,7 +101,7 @@ public enum EnumEnchantmentType
     }
 
     /**
-     * Return true if the item passed can be enchanted by a enchantment of this type.
+     * Return true if the item passed can be enchanted by a enchantment of this category.
      */
     public abstract boolean canEnchantItem(Item itemIn);
 }

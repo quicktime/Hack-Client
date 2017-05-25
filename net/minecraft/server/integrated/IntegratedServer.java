@@ -290,7 +290,7 @@ public class IntegratedServer extends MinecraftServer
     public CrashReport addServerInfoToCrashReport(CrashReport report)
     {
         report = super.addServerInfoToCrashReport(report);
-        report.getCategory().setDetail("Type", new ICrashReportDetail<String>()
+        report.getCategory().setDetail("Category", new ICrashReportDetail<String>()
         {
             public String call() throws Exception
             {
@@ -430,7 +430,7 @@ public class IntegratedServer extends MinecraftServer
     }
 
     /**
-     * Sets the game type for all worlds.
+     * Sets the game category for all worlds.
      */
     public void setGameType(GameType gameMode)
     {

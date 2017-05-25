@@ -68,7 +68,7 @@ public abstract class MapGenStructure extends MapGenBase
                         return String.valueOf(ChunkPos.asLong(chunkX, chunkZ));
                     }
                 });
-                crashreportcategory.setDetail("Structure type", new ICrashReportDetail<String>()
+                crashreportcategory.setDetail("Structure category", new ICrashReportDetail<String>()
                 {
                     public String call() throws Exception
                     {

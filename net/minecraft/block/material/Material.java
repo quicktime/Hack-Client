@@ -187,7 +187,7 @@ public class Material
     }
 
     /**
-     * This type of material can't be pushed, but pistons can move over it.
+     * This category of material can't be pushed, but pistons can move over it.
      */
     protected Material setNoPushMobility()
     {
@@ -196,7 +196,7 @@ public class Material
     }
 
     /**
-     * This type of material can't be pushed, and pistons are blocked to move.
+     * This category of material can't be pushed, and pistons are blocked to move.
      */
     protected Material setImmovableMobility()
     {

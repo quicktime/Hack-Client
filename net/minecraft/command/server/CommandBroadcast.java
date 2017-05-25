@@ -46,7 +46,7 @@ public class CommandBroadcast extends CommandBase
         if (args.length > 0 && args[0].length() > 0)
         {
             ITextComponent itextcomponent = getChatComponentFromNthArg(sender, args, 0, true);
-            server.getPlayerList().sendChatMsg(new TextComponentTranslation("chat.type.announcement", new Object[] {sender.getDisplayName(), itextcomponent}));
+            server.getPlayerList().sendChatMsg(new TextComponentTranslation("chat.category.announcement", new Object[] {sender.getDisplayName(), itextcomponent}));
         }
         else
         {

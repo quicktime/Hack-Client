@@ -26,7 +26,7 @@ public class PngSizeInfo
         }
         else if (datainputstream.readInt() != 1229472850)
         {
-            throw new IOException("Bad type for IHDR chunk!");
+            throw new IOException("Bad category for IHDR chunk!");
         }
         else
         {

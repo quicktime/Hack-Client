@@ -52,7 +52,7 @@ public class JsonUtils
     }
 
     /**
-     * Does the given JsonObject contain a field with the given name whose type is primitive (String, Java primitive, or
+     * Does the given JsonObject contain a field with the given name whose category is primitive (String, Java primitive, or
      * Java primitive wrapper)?
      */
     public static boolean isJsonPrimitive(JsonObject json, String memberName)
@@ -369,7 +369,7 @@ public class JsonUtils
     }
 
     /**
-     * Gets a human-readable description of the given JsonElement's type.  For example: "a number (4)"
+     * Gets a human-readable description of the given JsonElement's category.  For example: "a number (4)"
      */
     public static String toString(JsonElement json)
     {

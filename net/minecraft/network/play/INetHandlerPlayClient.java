@@ -93,7 +93,7 @@ public interface INetHandlerPlayClient extends INetHandler
     void handleSpawnGlobalEntity(SPacketSpawnGlobalEntity packetIn);
 
     /**
-     * Spawns the mob entity at the specified location, with the specified rotation, momentum and type. Updates the
+     * Spawns the mob entity at the specified location, with the specified rotation, momentum and category. Updates the
      * entities Datawatchers with the entity metadata specified in the packet
      */
     void handleSpawnMob(SPacketSpawnMob packetIn);

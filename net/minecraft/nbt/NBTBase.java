@@ -18,7 +18,7 @@ public abstract class NBTBase
     public abstract String toString();
 
     /**
-     * Gets the type byte for the tag.
+     * Gets the category byte for the tag.
      */
     public abstract byte getId();
 

@@ -924,7 +924,7 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer, ITickable
             }
             else
             {
-                ITextComponent itextcomponent = new TextComponentTranslation("chat.type.text", new Object[] {this.playerEntity.getDisplayName(), s});
+                ITextComponent itextcomponent = new TextComponentTranslation("chat.category.text", new Object[] {this.playerEntity.getDisplayName(), s});
                 this.serverController.getPlayerList().sendChatMsgImpl(itextcomponent, false);
             }
 

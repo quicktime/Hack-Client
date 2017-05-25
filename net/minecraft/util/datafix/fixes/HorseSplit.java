@@ -14,7 +14,7 @@ public class HorseSplit implements IFixableData
     {
         if ("EntityHorse".equals(compound.getString("id")))
         {
-            int i = compound.getInteger("Type");
+            int i = compound.getInteger("Category");
 
             switch (i)
             {
@@ -39,7 +39,7 @@ public class HorseSplit implements IFixableData
                     compound.setString("id", "SkeletonHorse");
             }
 
-            compound.removeTag("Type");
+            compound.removeTag("Category");
         }
 
         return compound;

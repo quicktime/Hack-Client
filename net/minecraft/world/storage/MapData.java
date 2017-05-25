@@ -167,7 +167,7 @@ public class MapData extends WorldSavedData
 
                 if (!this.mapDecorations.containsKey(nbttagcompound.getString("id")))
                 {
-                    this.func_191095_a(MapDecoration.Type.func_191159_a(nbttagcompound.getByte("type")), player.world, nbttagcompound.getString("id"), nbttagcompound.getDouble("x"), nbttagcompound.getDouble("z"), nbttagcompound.getDouble("rot"));
+                    this.func_191095_a(MapDecoration.Type.func_191159_a(nbttagcompound.getByte("category")), player.world, nbttagcompound.getString("id"), nbttagcompound.getDouble("x"), nbttagcompound.getDouble("z"), nbttagcompound.getDouble("rot"));
                 }
             }
         }
@@ -188,7 +188,7 @@ public class MapData extends WorldSavedData
         }
 
         NBTTagCompound nbttagcompound = new NBTTagCompound();
-        nbttagcompound.setByte("type", p_191094_3_.func_191163_a());
+        nbttagcompound.setByte("category", p_191094_3_.func_191163_a());
         nbttagcompound.setString("id", p_191094_2_);
         nbttagcompound.setDouble("x", (double)p_191094_1_.getX());
         nbttagcompound.setDouble("z", (double)p_191094_1_.getZ());

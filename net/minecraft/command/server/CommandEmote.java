@@ -50,7 +50,7 @@ public class CommandEmote extends CommandBase
         else
         {
             ITextComponent itextcomponent = getChatComponentFromNthArg(sender, args, 0, !(sender instanceof EntityPlayer));
-            server.getPlayerList().sendChatMsg(new TextComponentTranslation("chat.type.emote", new Object[] {sender.getDisplayName(), itextcomponent}));
+            server.getPlayerList().sendChatMsg(new TextComponentTranslation("chat.category.emote", new Object[] {sender.getDisplayName(), itextcomponent}));
         }
     }
 

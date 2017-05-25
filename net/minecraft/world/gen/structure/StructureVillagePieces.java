@@ -1655,7 +1655,7 @@ public class StructureVillagePieces
         {
             tagCompound.setInteger("HPos", this.averageGroundLvl);
             tagCompound.setInteger("VCount", this.villagersSpawned);
-            tagCompound.setByte("Type", (byte)this.structureType);
+            tagCompound.setByte("Category", (byte)this.structureType);
             tagCompound.setBoolean("Zombie", this.isZombieInfested);
         }
 
@@ -1663,7 +1663,7 @@ public class StructureVillagePieces
         {
             this.averageGroundLvl = tagCompound.getInteger("HPos");
             this.villagersSpawned = tagCompound.getInteger("VCount");
-            this.structureType = tagCompound.getByte("Type");
+            this.structureType = tagCompound.getByte("Category");
 
             if (tagCompound.getBoolean("Desert"))
             {

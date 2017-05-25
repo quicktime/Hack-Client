@@ -4,9 +4,9 @@ package com.darkmagician6.eventapi.events;
 /**
  * Simple interface that should be implemented in typed events.
  * A typed event is an event that can be called on multiple places
- * with the type defining where it was called.
+ * with the category defining where it was called.
  * <p/>
- * The type should be defined in the constructor when the new instance
+ * The category should be defined in the constructor when the new instance
  * of the event is created.
  *
  * @author DarkMagician6
@@ -15,9 +15,9 @@ package com.darkmagician6.eventapi.events;
 public interface Typed {
 
     /**
-     * Gets the current type of the event.
+     * Gets the current category of the event.
      *
-     * @return The type ID of the event.
+     * @return The category ID of the event.
      */
     byte getType();
 

@@ -982,7 +982,7 @@ public class NetHandlerPlayClient implements INetHandlerPlayClient
     }
 
     /**
-     * Spawns the mob entity at the specified location, with the specified rotation, momentum and type. Updates the
+     * Spawns the mob entity at the specified location, with the specified rotation, momentum and category. Updates the
      * entities Datawatchers with the entity metadata specified in the packet
      */
     public void handleSpawnMob(SPacketSpawnMob packetIn)

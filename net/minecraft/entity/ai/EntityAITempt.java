@@ -62,7 +62,7 @@ public class EntityAITempt extends EntityAIBase
 
         if (!(temptedEntityIn.getNavigator() instanceof PathNavigateGround))
         {
-            throw new IllegalArgumentException("Unsupported mob type for TemptGoal");
+            throw new IllegalArgumentException("Unsupported mob category for TemptGoal");
         }
     }
 

@@ -11,7 +11,7 @@ import net.minecraft.potion.PotionEffect;
 
 public class EnchantmentDamage extends Enchantment
 {
-    /** Holds the name to be translated of each protection type. */
+    /** Holds the name to be translated of each protection category. */
     private static final String[] PROTECTION_NAME = new String[] {"all", "undead", "arthropods"};
 
     /**
@@ -31,7 +31,7 @@ public class EnchantmentDamage extends Enchantment
     private static final int[] THRESHOLD_ENCHANTABILITY = new int[] {20, 20, 20};
 
     /**
-     * Defines the type of damage of the enchantment, 0 = all, 1 = undead, 3 = arthropods
+     * Defines the category of damage of the enchantment, 0 = all, 1 = undead, 3 = arthropods
      */
     public final int damageType;
 

@@ -21,7 +21,7 @@ public class GuiCreateWorld extends GuiScreen
     private String gameMode = "survival";
 
     /**
-     * Used to save away the game mode when the current "debug" world type is chosen (forcing it to spectator mode)
+     * Used to save away the game mode when the current "debug" world category is chosen (forcing it to spectator mode)
      */
     private String savedGameMode;
     private boolean generateStructuresEnabled = true;
@@ -360,8 +360,8 @@ public class GuiCreateWorld extends GuiScreen
     }
 
     /**
-     * Returns whether the currently-selected world type is actually acceptable for selection
-     * Used to hide the "debug" world type unless the shift key is depressed.
+     * Returns whether the currently-selected world category is actually acceptable for selection
+     * Used to hide the "debug" world category unless the shift key is depressed.
      */
     private boolean canSelectCurWorldType()
     {

@@ -22,7 +22,7 @@ public class ColorizerFoliage
     }
 
     /**
-     * Gets the foliage color for pine type (metadata 1) trees
+     * Gets the foliage color for pine category (metadata 1) trees
      */
     public static int getFoliageColorPine()
     {
@@ -30,7 +30,7 @@ public class ColorizerFoliage
     }
 
     /**
-     * Gets the foliage color for birch type (metadata 2) trees
+     * Gets the foliage color for birch category (metadata 2) trees
      */
     public static int getFoliageColorBirch()
     {

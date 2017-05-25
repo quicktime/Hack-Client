@@ -350,7 +350,7 @@ public class ShaderManager
     {
         JsonObject jsonobject = JsonUtils.getJsonObject(element, "uniform");
         String s = JsonUtils.getString(jsonobject, "name");
-        int i = ShaderUniform.parseType(JsonUtils.getString(jsonobject, "type"));
+        int i = ShaderUniform.parseType(JsonUtils.getString(jsonobject, "category"));
         int j = JsonUtils.getInt(jsonobject, "count");
         float[] afloat = new float[Math.max(j, 16)];
         JsonArray jsonarray = JsonUtils.getJsonArray(jsonobject, "values");

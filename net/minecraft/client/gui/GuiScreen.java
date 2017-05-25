@@ -312,10 +312,10 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback
                         List<String> list1 = Lists.<String>newArrayList();
                         list1.add(nbttagcompound.getString("name"));
 
-                        if (nbttagcompound.hasKey("type", 8))
+                        if (nbttagcompound.hasKey("category", 8))
                         {
-                            String s = nbttagcompound.getString("type");
-                            list1.add("Type: " + s);
+                            String s = nbttagcompound.getString("category");
+                            list1.add("Category: " + s);
                         }
 
                         list1.add(nbttagcompound.getString("id"));
@@ -338,7 +338,7 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback
                 if (statbase != null)
                 {
                     ITextComponent itextcomponent = statbase.getStatName();
-                    ITextComponent itextcomponent1 = new TextComponentTranslation("stats.tooltip.type." + (statbase.isAchievement() ? "achievement" : "statistic"), new Object[0]);
+                    ITextComponent itextcomponent1 = new TextComponentTranslation("stats.tooltip.category." + (statbase.isAchievement() ? "achievement" : "statistic"), new Object[0]);
                     itextcomponent1.getStyle().setItalic(Boolean.valueOf(true));
                     String s1 = statbase instanceof Achievement ? ((Achievement)statbase).getDescription() : null;
                     List<String> list = Lists.newArrayList(new String[] {itextcomponent.getFormattedText(), itextcomponent1.getFormattedText()});

@@ -41,7 +41,7 @@ public class CommandDefaultGameMode extends CommandGameMode
     }
 
     /**
-     * Set the default game type for the server. Also propogate the changes to all players if the server is set to force
+     * Set the default game category for the server. Also propogate the changes to all players if the server is set to force
      * game mode
      */
     protected void setDefaultGameType(GameType gameType, MinecraftServer server)

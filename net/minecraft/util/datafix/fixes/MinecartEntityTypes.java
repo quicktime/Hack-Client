@@ -19,7 +19,7 @@ public class MinecartEntityTypes implements IFixableData
         if ("Minecart".equals(compound.getString("id")))
         {
             String s = "MinecartRideable";
-            int i = compound.getInteger("Type");
+            int i = compound.getInteger("Category");
 
             if (i > 0 && i < MINECART_TYPE_LIST.size())
             {
@@ -27,7 +27,7 @@ public class MinecartEntityTypes implements IFixableData
             }
 
             compound.setString("id", s);
-            compound.removeTag("Type");
+            compound.removeTag("Category");
         }
 
         return compound;

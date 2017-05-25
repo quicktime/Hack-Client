@@ -13,7 +13,7 @@ public class RenderEntity extends Render<Entity>
     }
 
     /**
-     * Renders the desired {@code T} type Entity.
+     * Renders the desired {@code T} category Entity.
      */
     public void doRender(Entity entity, double x, double y, double z, float entityYaw, float partialTicks)
     {

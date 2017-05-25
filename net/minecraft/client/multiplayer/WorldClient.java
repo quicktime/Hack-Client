@@ -467,7 +467,7 @@ public class WorldClient extends World
                 return WorldClient.this.mc.player.getServerBrand();
             }
         });
-        crashreportcategory.setDetail("Server type", new ICrashReportDetail<String>()
+        crashreportcategory.setDetail("Server category", new ICrashReportDetail<String>()
         {
             public String call() throws Exception
             {

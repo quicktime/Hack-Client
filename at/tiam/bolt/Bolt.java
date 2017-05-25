@@ -32,7 +32,7 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.text.TextComponentTranslation;
 import org.lwjgl.input.Keyboard;
-import sun.awt.SunHints;
+
 // import net.minecraft.util.ChatComponentTranslation;
 
 /**
@@ -43,6 +43,7 @@ public class Bolt {
     public static String VERSION = "inDev 0.01";
     public static String NAME = "Bolt";
     public static String AUTHOR = "quicktime";
+    public static String INSTANCE = "Bolt";
 
     private static Bolt bolt;
 
@@ -105,20 +106,15 @@ public class Bolt {
     }
 
     private void loadFiles() {
-        (new Thread(){
-
-            public void run(){
-
+        (new Thread() {
+            public void run() {
                 try {
                     pluginManager.load();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
                 fileManager.loadSecondarySettings();
-
             }
-
         }).start();
     }
 
@@ -126,14 +122,20 @@ public class Bolt {
         fontRenderer = mc.fontRendererObj;
         moduleManager = new ModuleManager();
         guiHub = new GuiHub(this);
-        clickGui = new ClickGui(ModuleManager);
+        clickGui = new ClickGui(moduleManager);
         pluginManager = new PluginManager();
         commandManager = new CommandManager();
         friendManager = new FriendManager();
     }
 
     private void addShutdownHook() {
-
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                System.out.println("Bolt shutdown hook running");
+                fileManager.save();
+            }
+        });
     }
 
     public void log(String print) { logger.info(print); }
@@ -166,7 +168,7 @@ public class Bolt {
 
         if (mc.currentScreen == null) {
             for (Module m : ModuleManager.modules) {
-                if (m.getBind() == key) {
+                if (m.getKeybind() == key) {
                     moduleManager.toggle(m);
                 }
             }
@@ -174,7 +176,7 @@ public class Bolt {
         }
     }
 
-    public static String getDir() { return Minecraft.getMinecraft().mcDataDir.getAbsolutePath(); }
+    private static String getDir() { return Minecraft.getMinecraft().mcDataDir.getAbsolutePath(); }
 
     public static String getFullDir() {
         try {
