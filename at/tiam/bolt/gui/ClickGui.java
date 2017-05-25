@@ -186,7 +186,7 @@ public class ClickGui extends GuiScreen {
         Keyboard.enableRepeatEvents(false);
     }
 
-    private void setDragging(Window dragging){
+    public void setDragging(Window dragging){
 
         for(Window win : windows){
             if(win != dragging){
