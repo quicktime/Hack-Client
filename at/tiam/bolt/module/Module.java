@@ -1,6 +1,8 @@
 package at.tiam.bolt.module;
 
+import at.tiam.bolt.Bolt;
 import at.tiam.bolt.module.value.AbstractValue;
+import net.minecraft.client.entity.EntityPlayerSP;
 import org.lwjgl.input.Keyboard;
 
 /**
@@ -144,6 +146,8 @@ public class Module implements IToggleable {
 //    public boolean isEnabled() {
 //        return state;
 //    }
+
+    public EntityPlayerSP player = Bolt.getBolt().getPlayer();
 
     protected int keybind;
     protected boolean enabled;
