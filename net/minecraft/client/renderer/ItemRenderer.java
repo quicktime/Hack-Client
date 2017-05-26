@@ -557,7 +557,7 @@ public class ItemRenderer
     /**
      * Renders the fire on the screen for first person mode. Arg: partialTickTime
      */
-    private void renderFireInFirstPerson(float partialTicks)
+    public void renderFireInFirstPerson(float partialTicks)
     {
         Tessellator tessellator = Tessellator.getInstance();
         VertexBuffer vertexbuffer = tessellator.getBuffer();

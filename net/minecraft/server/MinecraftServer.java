@@ -405,12 +405,12 @@ public abstract class MinecraftServer implements Runnable, ICommandSender, IThre
     public abstract int getOpPermissionLevel();
 
     /**
-     * Get if RCON command events should be broadcast to ops
+     * Get if RCON command oldevent should be broadcast to ops
      */
     public abstract boolean shouldBroadcastRconToOps();
 
     /**
-     * Get if console command events should be broadcast to ops
+     * Get if console command oldevent should be broadcast to ops
      */
     public abstract boolean shouldBroadcastConsoleToOps();
 

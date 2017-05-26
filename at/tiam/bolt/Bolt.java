@@ -9,7 +9,7 @@ import java.io.File;
 import at.tiam.bolt.api.PluginManager;
 import at.tiam.bolt.camera.Camera;
 import at.tiam.bolt.command.CommandManager;
-import at.tiam.bolt.event.events.EventKeyboard;
+import at.tiam.bolt.event.oldevent.EventKeyboard;
 import at.tiam.bolt.friend.FriendManager;
 import at.tiam.bolt.hook.EntityRendererHook;
 import at.tiam.bolt.hook.ItemRendererHook;
@@ -140,7 +140,7 @@ public class Bolt {
 
     public void log(String print) { logger.info(print); }
     public GuiHub getGuiHub() { return guiHub; }
-    public Module getHideClientMod() { return Bolt.getBolt().getModuleManager().getModuleByClass(HideClient.class); }
+    public Module getHideClientModule() { return Bolt.getBolt().getModuleManager().getModuleByClass(HideClient.class); }
     public PluginManager getPluginManager() { return pluginManager; }
     public ModuleManager getModuleManager() { return  moduleManager; }
     public static Bolt getBolt() { return bolt; }
@@ -194,6 +194,6 @@ public class Bolt {
     public ValueRegistry getValueRegistry() { return valueRegistry; }
     public List<Camera> getCameras() { return cameras; }
     public CommandManager getCommandManager() { return commandManager; }
-    public void registerCamer(Camera camera) { cameras.add(camera); }
+    public void registerCamera(Camera camera) { cameras.add(camera); }
 
 }

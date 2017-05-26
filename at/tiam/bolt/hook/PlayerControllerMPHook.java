@@ -1,5 +1,12 @@
 package at.tiam.bolt.hook;
 
+import at.tiam.bolt.Bolt;
+import at.tiam.bolt.event.EventClickBlock;
+import at.tiam.bolt.event.EventDamageBlock;
+import at.tiam.bolt.event.EventPlaceBlock;
+import at.tiam.bolt.event.EventUpdateController;
+import at.tiam.bolt.module.Module;
+import at.tiam.bolt.module.modules.player.Reach;
 import com.darkmagician6.eventapi.EventManager;
 
 import net.minecraft.client.Minecraft;
@@ -8,19 +15,12 @@ import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.Vec3;
-import net.yawk.client.Client;
-import net.yawk.client.events.EventClickBlock;
-import net.yawk.client.events.EventDamageBlock;
-import net.yawk.client.events.EventGuiRender;
-import net.yawk.client.events.EventPlaceBlock;
-import net.yawk.client.events.EventUpdateController;
-import net.yawk.client.modmanager.Mod;
-import net.yawk.client.mods.building.Reach;
+import net.minecraft.util.math.Vec3d;
 
-public class PlayerControllerMPHook extends PlayerControllerMP{
+
+public class PlayerControllerMPHook extends PlayerControllerMP {
 
 	public PlayerControllerMPHook(Minecraft mcIn, NetHandlerPlayClient p_i45062_2_) {
 		super(mcIn, p_i45062_2_);
@@ -33,11 +33,12 @@ public class PlayerControllerMPHook extends PlayerControllerMP{
 		super.updateController();
 		EventManager.call(tick);
 	}
-	
+
+	/*
 	@Override
 	public boolean onBlockPlacement(EntityPlayerSP player,
 			WorldClient world, ItemStack itemstack,
-			BlockPos pos, EnumFacing facing, Vec3 vec) {
+			BlockPos pos, EnumFacing facing, Vec3d vec) {
 		
 		EventPlaceBlock e = new EventPlaceBlock(pos, facing, itemstack, vec);
 		EventManager.call(e);
@@ -49,6 +50,7 @@ public class PlayerControllerMPHook extends PlayerControllerMP{
 					pos, facing, vec);
 		}
 	}
+	*/
 	
 	@Override
     public boolean onPlayerDamageBlock(BlockPos pos, EnumFacing facing)
@@ -76,7 +78,7 @@ public class PlayerControllerMPHook extends PlayerControllerMP{
 		}
 	}
 
-	private Mod reach = Client.getClient().getModManager().getMod(Reach.class);
+	private Module reach = Bolt.getBolt().getModuleManager().getModuleByClass(Reach.class);
 	
 	@Override
 	public float getBlockReachDistance() {

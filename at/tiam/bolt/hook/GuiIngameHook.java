@@ -1,53 +1,47 @@
 package at.tiam.bolt.hook;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import at.tiam.bolt.Bolt;
+import at.tiam.bolt.camera.Camera;
+import at.tiam.bolt.event.EventGuiRender;
+import at.tiam.bolt.gui.Window;
+import at.tiam.bolt.module.Module;
 import com.darkmagician6.eventapi.EventManager;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiIngame;
-import net.minecraft.util.EnumChatFormatting;
-import net.yawk.client.Client;
-import net.yawk.client.cameras.Camera;
-import net.yawk.client.cameras.RearviewCamera;
-import net.yawk.client.events.EventGuiRender;
-import net.yawk.client.gui.GuiClickable;
-import net.yawk.client.gui.Window;
-import net.yawk.client.gui.maps.LargeMap;
-import net.yawk.client.modmanager.Mod;
-import net.yawk.client.mods.world.HideClient;
-import net.yawk.client.utils.Colours;
+import net.minecraft.util.text.TextFormatting;
 
 public class GuiIngameHook extends GuiIngame{
 	
 	public GuiIngameHook(Minecraft mc) {
 		super(mc);
+
+		Bolt.setClient(new Bolt(mc));
+		Bolt.getBolt().init();
 		
-		Client.setClient(new Client(mc));
-		Client.getClient().init();
-		
-		hideClientMod = Client.getClient().getHideClientMod();
+		hideClientModule = Bolt.getBolt().getHideClientModule();
 	}
 	
-	private Mod hideClientMod;
+	private Module hideClientModule;
 	
 	private EventGuiRender eventGuiRender = new EventGuiRender();
 	
 	//private Camera cam = new Camera();
-	
+
+	// Was public void func_175180_a(float p_175180_1_)
+
 	@Override
-	public void func_175180_a(float p_175180_1_){
+	public void renderGameOverlay(float p_175180_1_){
 		
-		super.func_175180_a(p_175180_1_);
+		super.renderGameOverlay(p_175180_1_);
 		
-		if(!Client.getClient().getMinecraft().gameSettings.showDebugInfo) {
-			if(!hideClientMod.isEnabled()){
-				Client.getClient().getFontRenderer().drawStringWithShadow("Yawk " + EnumChatFormatting.GREEN + Client.VERSION + EnumChatFormatting.LIGHT_PURPLE + " ("+(Client.getClient().getSession().isPremium()? "Premium":"Beta")+")", 3, 2, 0xFFFFFFFF, true);
+		if(!Bolt.getBolt().getMc().gameSettings.showDebugInfo) {
+			if(!hideClientModule.isEnabled()){
+				Bolt.getBolt().getFontRenderer().drawStringWithShadow("Bolt " + TextFormatting.GREEN + Bolt.VERSION + TextFormatting.LIGHT_PURPLE + " (" + ( Bolt.getBolt().getSession().isPremium() ? "Premium":"Beta" ) + ")", 3, 2, 0xFFFFFFFF);
 			}
 			
-			if(Client.getClient().getMinecraft().currentScreen == null){
-				for(Window win : Client.getClient().gui.windows){
+			if(Bolt.getBolt().getMc().currentScreen == null){
+				for(Window win : Bolt.getBolt().clickGui.windows){
 					if(win.pinned){
 						win.renderWindow(0, 0, false);
 					}
@@ -70,7 +64,7 @@ public class GuiIngameHook extends GuiIngame{
 		cam.updateFramebuffer();
 		*/
 		
-		for(Camera camera : Client.getClient().getCameras()){
+		for(Camera camera : Bolt.getBolt().getCameras()){
 			
 			/*
 			camera.cameraPosX = Client.getClient().getPlayer().posX;

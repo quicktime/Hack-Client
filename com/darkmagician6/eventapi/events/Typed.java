@@ -2,7 +2,7 @@ package com.darkmagician6.eventapi.events;
 
 
 /**
- * Simple interface that should be implemented in typed events.
+ * Simple interface that should be implemented in typed oldevent.
  * A typed event is an event that can be called on multiple places
  * with the category defining where it was called.
  * <p/>

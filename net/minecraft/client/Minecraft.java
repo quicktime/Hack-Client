@@ -1808,7 +1808,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
             }
             catch (Throwable throwable1)
             {
-                CrashReport crashreport = CrashReport.makeCrashReport(throwable1, "Updating screen events");
+                CrashReport crashreport = CrashReport.makeCrashReport(throwable1, "Updating screen oldevent");
                 CrashReportCategory crashreportcategory = crashreport.makeCategory("Affected screen");
                 crashreportcategory.setDetail("Screen name", new ICrashReportDetail<String>()
                 {

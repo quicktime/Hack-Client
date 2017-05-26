@@ -1,13 +1,5 @@
 package at.tiam.bolt.gui;
 
-import at.tiam.bolt.Bolt;
-import at.tiam.bolt.event.EventManagerOld;
-import at.tiam.bolt.event.EventTargetOld;
-import at.tiam.bolt.event.events.EventRender2D;
-import at.tiam.bolt.module.Module;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.ScaledResolution;
-
 /**
  * Created by quicktime on 5/22/17.
  */

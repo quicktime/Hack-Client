@@ -120,7 +120,7 @@ public class GuiMultiplayer extends GuiScreen
     }
 
     /**
-     * Called when the screen is unloaded. Used to disable keyboard repeat events
+     * Called when the screen is unloaded. Used to disable keyboard repeat oldevent
      */
     public void onGuiClosed()
     {

@@ -257,7 +257,7 @@ public class PlayerInteractionManager
     }
 
     /**
-     * Removes a block and triggers the appropriate events
+     * Removes a block and triggers the appropriate oldevent
      */
     private boolean removeBlock(BlockPos pos)
     {

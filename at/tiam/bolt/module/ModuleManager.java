@@ -4,8 +4,8 @@ import at.tiam.bolt.Bolt;
 import at.tiam.bolt.api.PluginData;
 import at.tiam.bolt.module.modules.Step;
 import at.tiam.bolt.module.modules.*;
-import at.tiam.bolt.event.events.EventDisabled;
-import at.tiam.bolt.event.events.EventEnabled;
+import at.tiam.bolt.event.oldevent.EventDisabled;
+import at.tiam.bolt.event.oldevent.EventEnabled;
 import at.tiam.bolt.util.ReflectionUtils;
 
 import com.darkmagician6.eventapi.EventManager;
@@ -84,7 +84,7 @@ public class ModuleManager {
         return null;
     }
 
-    public Module getModuleByClass(Class<? extends Module> clazz) {
+    public Module getModuleByClass(Class clazz) {
         for (Module module : modules) {
             if (module.getClass().equals(clazz)) {
                 return module;

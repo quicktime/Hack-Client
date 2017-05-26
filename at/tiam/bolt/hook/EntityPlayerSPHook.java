@@ -8,8 +8,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.MoverType;
 import net.minecraft.stats.StatisticsManager;
 import net.minecraft.world.World;
+
 import at.tiam.bolt.Bolt;
 import at.tiam.bolt.command.Command;
 import at.tiam.bolt.command.CommandManager;
@@ -65,19 +67,20 @@ public class EntityPlayerSPHook extends EntityPlayerSP {
 	}
 
 	@Override
-	public void moveEntity(double x, double y, double z) {
+	public void moveEntity(MoverType moverType, double x, double y, double z) {
 
 		EventMoveEntity e = new EventMoveEntity(EventType.PRE, x, y, z);
 		EventManager.call(e);
 
 		if(!e.isCancelled()){
-			super.moveEntity(e.x, e.y, e.z);
+			super.moveEntity(moverType, e.x, e.y, e.z);
 		}
 
 		EventMoveEntity e1 = new EventMoveEntity(EventType.POST, e.x, e.y, e.z);
 		EventManager.call(e1);
 	}
 
+	/*
 	@Override
 	public void sendMotionUpdates() {
 
@@ -91,6 +94,7 @@ public class EntityPlayerSPHook extends EntityPlayerSP {
 		EventMotionUpdate e1 = new EventMotionUpdate(EventType.POST);
 		EventManager.call(e1);
 	}
+	*/
 
 	@Override
 	public void respawnPlayer() {
@@ -100,6 +104,7 @@ public class EntityPlayerSPHook extends EntityPlayerSP {
 		super.respawnPlayer();
 	}
 
+	/*
 	@Override
 	public boolean interactWith(Entity en) {
 
@@ -113,6 +118,7 @@ public class EntityPlayerSPHook extends EntityPlayerSP {
 			return false;
 		}
 	}
+	*/
 
 	@Override
 	public void jump() {
@@ -137,12 +143,12 @@ public class EntityPlayerSPHook extends EntityPlayerSP {
 
 			String[] parts = commandWithArgs.split(" ");
 
-			String[] response = Bolt.getClient().getCommandManager().run(parts);
+			String[] response = Bolt.getBolt().getCommandManager().run(parts);
 
 			if(response != null){
 
 				for(String line : response){
-					Bolt.getClient().addChat(line);
+					Bolt.getBolt().addChat(line);
 				}
 
 			}

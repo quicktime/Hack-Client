@@ -229,6 +229,6 @@ public class Window implements IRectangle {
 
     @Override
     public int getRectY() {
-        return posY+TITLE_COMPONENT_SPACE;
+        return posY + TITLE_COMPONENT_SPACE;
     }
 }

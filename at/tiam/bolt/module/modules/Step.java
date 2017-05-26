@@ -1,10 +1,9 @@
 package at.tiam.bolt.module.modules;
 
-import at.tiam.bolt.event.EventTargetOld;
-import at.tiam.bolt.event.events.EventUpdate;
+import at.tiam.bolt.event.oldevent.EventTargetOld;
+import at.tiam.bolt.event.oldevent.EventUpdate;
 import at.tiam.bolt.module.RegisterMod;
 import net.minecraft.client.Minecraft;
-import org.lwjgl.input.Keyboard;
 import at.tiam.bolt.module.Module;
 
 /**

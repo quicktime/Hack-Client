@@ -4,7 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
 import at.tiam.bolt.camera.Camera;
 
-public class ItemRendererHook extends ItemRenderer{
+public class ItemRendererHook extends ItemRenderer {
 
 	public ItemRendererHook(Minecraft mcIn) {
 		super(mcIn);

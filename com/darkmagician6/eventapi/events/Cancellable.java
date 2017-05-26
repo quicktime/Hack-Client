@@ -1,7 +1,7 @@
 package com.darkmagician6.eventapi.events;
 
 /**
- * Simple interface which should be implemented in events that can be cancelled.
+ * Simple interface which should be implemented in oldevent that can be cancelled.
  *
  * @author DarkMagician6
  * @since August 27, 2013

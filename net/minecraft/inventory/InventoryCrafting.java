@@ -16,7 +16,7 @@ public class InventoryCrafting implements IInventory
     private final int inventoryHeight;
 
     /**
-     * Class containing the callbacks for the events on_GUIClosed and on_CraftMaxtrixChanged.
+     * Class containing the callbacks for the oldevent on_GUIClosed and on_CraftMaxtrixChanged.
      */
     private final Container eventHandler;
 

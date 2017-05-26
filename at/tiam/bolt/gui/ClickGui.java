@@ -1,10 +1,18 @@
 package at.tiam.bolt.gui;
 
 import at.tiam.bolt.Bolt;
+import at.tiam.bolt.camera.ArrowCamera;
+import at.tiam.bolt.camera.PeriscopeCamera;
+import at.tiam.bolt.camera.PlayerCamera;
+import at.tiam.bolt.camera.RearviewCamera;
+import at.tiam.bolt.gui.components.buttons.*;
+import at.tiam.bolt.gui.components.scrolling.PlayerEntityScrollPane;
+import at.tiam.bolt.gui.components.scrolling.PluginScrollPane;
+import at.tiam.bolt.gui.components.selector.SelectorButton;
+import at.tiam.bolt.gui.components.selector.SelectorSystem;
 import at.tiam.bolt.module.Module;
 import at.tiam.bolt.module.ModuleManager;
 import at.tiam.bolt.gui.components.*;
-import at.tiam.bolt.gui.components.buttons.LinkButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.input.Keyboard;
@@ -45,9 +53,9 @@ public class ClickGui extends GuiScreen {
                 for (Module module : moduleManager.modules) {
                     if (module.getCategory() == category) {
                         if (module.hasOptions()) {
-                            window.addComponent(new OptionsModuleButton(module)); // TODO: Create OptionsModuleButton class (at.tiam.bolt.gui.component.buttons)
+                            window.addComponent(new OptionsModuleButton(module));
                         } else {
-                            window.addComponent(new ModuleButton); // TODO: Create ModuleButton class (at.tiam.bolt.gui.component.buttons)
+                            window.addComponent(new ModuleButton(module));
                         }
                     }
                 }
@@ -57,7 +65,7 @@ public class ClickGui extends GuiScreen {
 
     private void initEnabledModulesWindows(ModuleManager moduleManager) {
         Window enabledModules = new Window("Enabled", moduleManager, 85);
-        enabledModules.addComponent(new EnabledModulesDisplay()); // TODO: Create EnabledModulesDisplay class (at.tiam.bolt.gui.components)
+        enabledModules.addComponent(new EnabledModulesDisplay());
         windows.add(enabledModules);
     }
 
@@ -65,9 +73,9 @@ public class ClickGui extends GuiScreen {
         Window plugins = new Window("Get Plugins", moduleManager, 120);
         windows.add(plugins);
 
-        SelectorSytstem<SelectorButton> pluginSystem = new SelectorSystem<SelectorButton>(); // TODO: Create SelectorButton class (at.tiam.bolt.gui.components.buttons)
-        plugins.addComponent(new PluginScrollPane(72, pluginSystem, false)); // TODO: Create PluginScrollPane class (at.tiam.bolt.gui.components.scrolling)
-        plugins.addComponent(new PluginDownloadButton(pluginSystem)); // TODO: Create PluginDownloadButton class (at.tiam.bolt.gui.components.buttons)
+        SelectorSystem<SelectorButton> pluginSystem = new SelectorSystem<SelectorButton>();
+        plugins.addComponent(new PluginScrollPane(72, pluginSystem, false));
+        plugins.addComponent(new PluginDownloadButton(pluginSystem));
     }
 
     private void initColorsWindow(ModuleManager moduleManager) {
@@ -97,12 +105,12 @@ public class ClickGui extends GuiScreen {
         windows.add(arrowView);
 
         Window periscope = new Window("Periscope", moduleManager, 85);
-        periscope.addComponent(new CameraDisplay(new PeriscopeCamer(periscope)));
+        periscope.addComponent(new CameraDisplay(new PeriscopeCamera(periscope)));
         windows.add(periscope);
 
         Window players = new Window("Players", moduleManager, 85);
-        SelectorSystem<SelectorButton> playerSystem = new SelectorySystem<SelectorButton>();
-        players.addComponent(new CameraDisplay(new PlayerCamer(players, playerSystem)));
+        SelectorSystem<SelectorButton> playerSystem = new SelectorSystem<SelectorButton>();
+        players.addComponent(new CameraDisplay(new PlayerCamera(players, playerSystem)));
         SpoilerButton spoilerButton = new SpoilerButton("Select Player");
         players.addComponent(spoilerButton);
         spoilerButton.addComponent(new PlayerEntityScrollPane(50, playerSystem));

@@ -2,7 +2,7 @@ package com.darkmagician6.eventapi.events;
 
 /**
  * The most basic form of an stoppable EventOld.
- * Stoppable events are called seperate from other events and the calling of methods is stopped
+ * Stoppable oldevent are called seperate from other oldevent and the calling of methods is stopped
  * as soon as the EventStoppable is stopped.
  *
  * @author DarkMagician6
