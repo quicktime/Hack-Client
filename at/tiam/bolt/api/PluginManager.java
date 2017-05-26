@@ -39,7 +39,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import sun.plugin2.main.server.Plugin;
 
 /**
  * Handles all plugin data and plugin loading
@@ -271,7 +270,17 @@ public class PluginManager {
                         if (data.isPrivatePlugin()) {
                             try {
                                 addPlugin(data);
-                            } catch (IOException | ClassNotFoundException | InstantiationException | IllegalAccessException | DependencyNotInstalledException | DependencyNotFoundException e) {
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } catch (ClassNotFoundException e) {
+                                e.printStackTrace();
+                            } catch (InstantiationException e) {
+                                e.printStackTrace();
+                            } catch (IllegalAccessException e) {
+                                e.printStackTrace();
+                            } catch (DependencyNotInstalledException e) {
+                                e.printStackTrace();
+                            } catch (DependencyNotFoundException e) {
                                 e.printStackTrace();
                             }
                         }
@@ -341,7 +350,9 @@ public class PluginManager {
             Bolt.getBolt().log("RESPONSE: " + document.text());
 
             return document.text().equalsIgnoreCase("true");
-        } catch (IOException | NoSuchAlgorithmException e) {
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
         return false;
